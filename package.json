@@ -1,11 +1,7 @@
 {
   "name": "clickylatin-api",
   "version": "1.0.0",
-  "description": "HTTP database/api for Clicky Latin - https://clickylatin.vercel.app. Feel free to modify and use this as you like.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "description": "HTTP database/api for Clicky Latin - https://clickylatin.vercel.app.",
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
@@ -15,7 +11,7 @@
     "nodemailer": "^6.10.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "license": "Apache-2.0",
   "keywords": []
