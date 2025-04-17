@@ -2,28 +2,44 @@
   "version": 2,
   "routes": [
     {
+      "src": "/",
+      "methods": ["GET"],
+      "dest": "/api/index.js"
+    },
+    {
       "src": "/get-game",
+      "methods": ["GET"],
       "dest": "/api/get-game.js"
     },
     {
       "src": "/all",
+      "methods": ["GET"],
       "dest": "/api/get-all.js"
     },
     {
       "src": "/create",
+      "methods": ["POST"],
       "dest": "/api/create-game.js"
     },
     {
       "src": "/delete",
+      "methods": ["GET"],
       "dest": "/api/delete-game.js"
     },
     {
       "src": "/current-deployment",
+      "methods": ["GET"],
       "dest": "/api/current-deployment.js"
     },
     {
       "src": "/current-deployment-msg",
+      "methods": ["GET"],
       "dest": "/api/current-deployment-msg.js"
+    },
+    {
+      "src": "/feature-suggestion",
+      "methods": ["POST"],
+      "dest": "/api/feature-suggestion.js"
     }
   ]
 }
