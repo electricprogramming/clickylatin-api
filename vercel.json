@@ -1,9 +1,5 @@
 {
-  "rewrites": [
-    {
-      "source": "/current-deployment",
-      "destination": "/api/current-deployment.js"
-    },
+  "routes": [
     {
       "source": "/",
       "destination": "/api/create-game.js",
