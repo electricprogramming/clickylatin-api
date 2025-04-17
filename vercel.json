@@ -40,6 +40,10 @@
       "src": "/feature-suggestion",
       "methods": ["POST"],
       "dest": "/api/feature-suggestion.js"
+    },
+    {
+      "src": "/.*",
+      "dest": "/api/_fake-method.js"
     }
   ]
 }
