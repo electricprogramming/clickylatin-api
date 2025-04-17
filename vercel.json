@@ -14,6 +14,10 @@
       "dest": "/api/create-game.js"
     },
     {
+      "src": "/delete",
+      "dest": "/api/delete-game.js"
+    },
+    {
       "src": "/current-deployment",
       "dest": "/api/current-deployment.js"
     },

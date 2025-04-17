@@ -5,7 +5,7 @@ export default async function delete_game(req, res) {
   if (req.headers.Authorization !== `Key ${process.env.VALID_DELETE_KEY}`) {
     return res.status(401).json({ error: 'No Authentication or Invalid Authentication' });
   }
-  const gameCode = req.body;
+  const gameCode = req.query.gamecode || req.body;
   if (!gameCode) {
     return res.status(400).json({ error: 'Game code does not exist.' });
   }
