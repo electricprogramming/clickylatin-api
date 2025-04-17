@@ -3,42 +3,42 @@
   "routes": [
     {
       "src": "/",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
       "dest": "/api/index.js"
     },
     {
       "src": "/get-game",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
       "dest": "/api/get-game.js"
     },
     {
       "src": "/all",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
       "dest": "/api/get-all.js"
     },
     {
       "src": "/create",
-      "methods": ["POST"],
+      "methods": ["POST", "OPTIONS"],
       "dest": "/api/create-game.js"
     },
     {
       "src": "/delete",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
       "dest": "/api/delete-game.js"
     },
     {
       "src": "/current-deployment",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
       "dest": "/api/current-deployment.js"
     },
     {
       "src": "/current-deployment-msg",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
       "dest": "/api/current-deployment-msg.js"
     },
     {
       "src": "/feature-suggestion",
-      "methods": ["POST"],
+      "methods": ["POST", "OPTIONS"],
       "dest": "/api/feature-suggestion.js"
     },
     {
