@@ -6,9 +6,9 @@ export async function getData() {
       }
     })
       .then(res => res.json())
-      .then(data => atob(data.content))
+      .then(file => atob(file.content))
       .then(json => JSON.parse(json))
-      .then(fileContent => resolve(fileContent))
+      .then(data => resolve(data))
       .catch(err => reject(err));
   });
 }
