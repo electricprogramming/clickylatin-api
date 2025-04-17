@@ -2,7 +2,7 @@ export default async function current_deployment(req, res) {
   const PROJECT_NAME = 'clickylatin';
   const TEAM_ID = 'team_UdiGAc5Yh2R4JswpV4P7hlsa';
   const reqTimestamp = req.query.timestamp || Date.now();
-  const target = req.query.target || req.headers.origin.includes('dev') ? 'preview' : 'production';
+  const target = req.query.target || (req.headers.origin || '').includes('dev') ? 'preview' : 'production';
   fetch(`https://api.vercel.com/v6/now/deployments?teamId=${TEAM_ID}&projectId=${PROJECT_NAME}&target=${target}`, {
     method: 'GET',
     headers: {
