@@ -17,8 +17,8 @@ export default async function delete_game(req, res) {
     if (data.hasOwnProperty(gameCode)) {
       delete data[gameCode];
       setData(data)
-        .then(thing => {
-          res.status(200).json({ message: `Game with id ${gameCode} deleted successfully`, thing: JSON.stringify(thing) });
+        .then(() => {
+          res.status(200).json({ message: `Game with id ${gameCode} deleted successfully` });
         })
         .catch(e => res.status(500).json({ error: e.message }));
     } else {
