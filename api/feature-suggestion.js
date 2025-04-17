@@ -1,4 +1,6 @@
+import cors from './_cors.js';
 export default async function feature_suggestion(req, res) {
+  cors(res);
   const { title, body } = req.body;
 
   const transporter = nodemailer.createTransport({
