@@ -2,6 +2,11 @@ import cors from './_cors.js';
 import { getData } from './_database.js';
 export default async function get_game(req, res) {
   cors(res);
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
   const gameCode = req.query.gamecode;
   if (!gameCode) {
     return res.status(400).json({ error: 'Game code does not exist.' });

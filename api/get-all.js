@@ -2,6 +2,11 @@ import cors from './_cors.js';
 import { getData } from './_database.js';
 export default async function get_all(req, res) {
   cors(res);
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
   getData()
     .then(data => {
       if (data) {
