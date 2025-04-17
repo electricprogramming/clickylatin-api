@@ -3,8 +3,7 @@ import { getData } from './_database.js';
 export default async function get_all(req, res) {
   cors(res);
   if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
+    return res.status(200).end();
   }
   
   getData()

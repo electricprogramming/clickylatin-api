@@ -2,8 +2,7 @@ import cors from './_cors.js';
 export default async function feature_suggestion(req, res) {
   cors(res);
   if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
+    return res.status(200).end();
   }
   
   const { title, body } = req.body;
