@@ -42,7 +42,7 @@
       "dest": "/api/feature-suggestion.js"
     },
     {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "/api/_fake-method.js"
     }
   ]
