@@ -1,1 +1,14 @@
-{}
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/create-game.js",
+      "methods": ["POST"]
+    },
+    {
+      "source": "/",
+      "destination": "/api/get-game.js",
+      "methods": ["GET"]
+    }
+  ]
+}
