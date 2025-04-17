@@ -12,10 +12,12 @@ export default async function delete_game(req, res) {
   getData().then(data => {
     if (data.hasOwnProperty(id)) {
       delete data[id];
-      setData(data).then(thing => {
-        console.log(thing) // i legit have no clue what this is
-        res.status(200).json({ message: `Game with id ${id} deleted successfully` });
-      });
+      setData(data)
+        .then(thing => {
+          console.log(thing) // i legit have no clue what this is
+          res.status(200).json({ message: `Game with id ${id} deleted successfully` });
+        })
+        .catch(e => res.status(500).json({ error: e.message }));
     } else {
       res.status(404).json({ error: 'Game not found' });
     }
