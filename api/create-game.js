@@ -29,7 +29,7 @@ export default async function create_game(req, res) {
       second: '2-digit',
       hour12: true, // 24-hour format
     });
-    console.log(`New game created with id ${newId} and data\n${JSON.stringify(newData, null, 2)}\nat ${formattedDate}`);
+    console.log(`New game created with id ${newId} and data\n${JSON.stringify(newData, null, 2)}\non ${formattedDate}`);
     setData(data)
       .then(() => {
         res.status(200).json({ message: 'Success!', gameCode: newId })
