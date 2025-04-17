@@ -1,5 +1,4 @@
 {
-  "tralingSlash": false,
   "version": 2,
   "routes": [
     {
@@ -41,6 +40,11 @@
       "src": "/feature-suggestion",
       "methods": ["POST", "OPTIONS"],
       "dest": "/api/feature-suggestion.js"
+    },
+    {
+      "src": "/(.*)",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "CONNECT", "TRACE"],
+      "dest": "/api/_fake-method.js"
     }
   ]
 }
