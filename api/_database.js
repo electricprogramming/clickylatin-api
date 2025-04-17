@@ -30,7 +30,7 @@ export async function setData(newData) {
         body: JSON.stringify({
           message: 'remotely update data.json',
           sha: data.sha,
-          content: btoa(JSON.stringify(newData))
+          content: btoa(JSON.stringify(newData, null, '\t')) // Use tabs to prettify while saving bytes compared to using spaces
         })
       }))
       .then(res => res.json())
