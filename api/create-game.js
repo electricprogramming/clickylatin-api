@@ -20,13 +20,14 @@ export default async function create_game(req, res) {
     data[newId] = newData;
     const formattedDate = new Date().toLocaleString('en-US', {
       timeZone: 'America/New_York',
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric',
       year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
+      hour: 'numeric',
       minute: '2-digit',
       second: '2-digit',
-      hour12: true,
+      hour12: true, // 24-hour format
     });
     console.log(`New game created with id ${newId} and data\n${JSON.stringify(newData, null, 2)}\nat ${formattedDate}`);
     setData(data)
