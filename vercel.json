@@ -2,14 +2,20 @@
   "version": 2,
   "routes": [
     {
-      "source": "/",
-      "destination": "/api/create-game.js",
-      "methods": ["POST"]
+      "src": "/create",
+      "dest": "/api/create-game.js"
     },
     {
-      "source": "/",
-      "destination": "/api/get-game.js",
-      "methods": ["GET"]
+      "src": "/get-game",
+      "dest": "/api/get-game.js"
+    },
+    {
+      "src": "/current-deployment",
+      "dest": "/api/current-deployment.js"
+    },
+    {
+      "src": "/current-deployment-msg",
+      "dest": "/api/current-deployment-msg.js"
     }
   ]
 }
