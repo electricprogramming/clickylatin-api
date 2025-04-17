@@ -43,6 +43,7 @@
     },
     {
       "src": "/(.*)",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "CONNECT", "TRACE"],
       "dest": "/api/_fake-method.js"
     }
   ]
