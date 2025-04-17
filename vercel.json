@@ -2,12 +2,16 @@
   "version": 2,
   "routes": [
     {
-      "src": "/create",
-      "dest": "/api/create-game.js"
-    },
-    {
       "src": "/get-game",
       "dest": "/api/get-game.js"
+    },
+    {
+      "src": "/all",
+      "dest": "/api/get-all.js"
+    },
+    {
+      "src": "/create",
+      "dest": "/api/create-game.js"
     },
     {
       "src": "/current-deployment",
