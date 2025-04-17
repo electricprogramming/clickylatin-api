@@ -1,6 +1,6 @@
 {
-  "version": 2,
   "tralingSlash": false,
+  "version": 2,
   "routes": [
     {
       "src": "/",
