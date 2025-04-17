@@ -1,4 +1,6 @@
+import cors from './_cors.js';
 export default async function current_deployment(req, res) {
+  cors(res);
   const PROJECT_NAME = 'clickylatin';
   const TEAM_ID = 'team_UdiGAc5Yh2R4JswpV4P7hlsa';
   const reqTimestamp = req.query.timestamp || Date.now();
