@@ -1,29 +1,24 @@
 {
-  "version": 2,
   "routes": [
     {
-      "src": "/get-game",
-      "dest": "/api/get-game.js"
+      "src": "/api/*",
+      "methods": ["GET"],
+      "dest": "/api/get-handler"
     },
     {
-      "src": "/all",
-      "dest": "/api/get-all.js"
+      "src": "/api/*",
+      "methods": ["POST"],
+      "dest": "/api/post-handler"
     },
     {
-      "src": "/create",
-      "dest": "/api/create-game.js"
+      "src": "/api/*",
+      "methods": ["PUT"],
+      "dest": "/api/put-handler"
     },
     {
-      "src": "/delete",
-      "dest": "/api/delete-game.js"
-    },
-    {
-      "src": "/current-deployment",
-      "dest": "/api/current-deployment.js"
-    },
-    {
-      "src": "/current-deployment-msg",
-      "dest": "/api/current-deployment-msg.js"
+      "src": "/api/*",
+      "methods": ["DELETE"],
+      "dest": "/api/delete-handler"
     }
   ]
 }
