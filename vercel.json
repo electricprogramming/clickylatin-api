@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/current-deployment",
+      "destination": "/api/current-deployment.js"
+    },
+    {
       "source": "/",
       "destination": "/api/create-game.js",
       "methods": ["POST"]
