@@ -43,7 +43,7 @@
     },
     {
       "src": "/(.+)",
-      "dest": "/api/_fake-method.js"
+      "dest": "/api/fake-method.js"
     }
   ]
 }
