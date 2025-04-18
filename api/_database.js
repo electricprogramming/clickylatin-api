@@ -6,7 +6,7 @@ export async function getData() {
       }
     })
       .then(res => res.json())
-      .then(file => atob(file.content))
+      .then(file => decodeURIComponent(escape(atob(file.content))))
       .then(json => JSON.parse(json))
       .then(data => resolve(data))
       .catch(err => reject(err));
@@ -30,7 +30,7 @@ export async function setData(newData) {
         body: JSON.stringify({
           message: 'remotely update data.json',
           sha: data.sha,
-          content: btoa(JSON.stringify(newData, null, '\t')) // Use tabs to prettify while saving bytes compared to using spaces
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(newData, null, '\t')))) // Use tabs to prettify while saving bytes compared to using spaces
         })
       }))
       .then(res => res.json())
