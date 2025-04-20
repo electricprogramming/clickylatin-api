@@ -23,7 +23,7 @@
     },
     {
       "src": "/delete",
-      "methods": ["GET", "OPTIONS"],
+      "methods": ["GET", "DELETE", "OPTIONS"],
       "dest": "/api/delete-game.js"
     },
     {
@@ -40,6 +40,11 @@
       "src": "/feature-suggestion",
       "methods": ["POST", "OPTIONS"],
       "dest": "/api/feature-suggestion.js"
+    },
+    {
+      "src": "/bug-report",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "/api/bug-report.js"
     },
     {
       "src": "/(.+)",
