@@ -1,4 +1,5 @@
 import cors from './_cors.js';
+import nodemailer from 'nodemailer';
 export default async function feature_suggestion(req, res) {
   cors(res);
   if (req.method === 'OPTIONS') {

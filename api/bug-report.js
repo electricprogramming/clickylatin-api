@@ -1,10 +1,11 @@
 import cors from './_cors.js';
+import nodemailer from 'nodemailer';
 export default async function bug_report(req, res) {
   cors(res);
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
-  
+
   const { title, body } = req.body;
 
   const transporter = nodemailer.createTransport({
