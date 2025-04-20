@@ -1,4 +1,5 @@
 import cors from './_cors.js';
+import htmlSafe from './_html-safe.js';
 import nodemailer from 'nodemailer';
 export default async function bug_report(req, res) {
   cors(res);
