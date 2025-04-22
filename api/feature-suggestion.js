@@ -21,7 +21,7 @@ export default async function feature_suggestion(req, res) {
     await transporter.sendMail({
       from: process.env.GMAIL_FROM,
       to: process.env.GMAIL_TO,
-      subject: `Clicky Latin Feature Suggestion - ${title}`,
+      subject: `Clicky Latin Feature Suggestion`,
       html: `
         <h1>${htmlSafe(title)}</h1><div style="display:none;"> - </div>
         <p>${htmlSafe(body)}</p>

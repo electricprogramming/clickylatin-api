@@ -21,7 +21,7 @@ export default async function bug_report(req, res) {
     await transporter.sendMail({
       from: process.env.GMAIL_FROM,
       to: process.env.GMAIL_TO,
-      subject: `Clicky Latin Bug Report - ${title}`,
+      subject: `Clicky Latin Bug Report`,
       html: `
         <h1>${htmlSafe(title)}</h1><div style="display:none;"> - </div>
         <p>${htmlSafe(body)}</p>
