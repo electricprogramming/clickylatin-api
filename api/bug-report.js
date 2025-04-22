@@ -26,7 +26,7 @@ export default async function bug_report(req, res) {
         <div style="font-family: 'Segoe UI';">
           <h1 style="margin: 0;">${htmlSafe(title)}</h1>
           <div style="display:none;"> - </div>
-          <p style="margin: 0;">${htmlSafe(body)}</p>
+          <p style="margin: 0; font-size: 1.2em;">${htmlSafe(body)}</p>
         </div>
       `,
       // Ensures the message is sent into a new thread
