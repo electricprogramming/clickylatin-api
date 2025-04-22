@@ -23,8 +23,11 @@ export default async function bug_report(req, res) {
       to: process.env.GMAIL_TO,
       subject: `Clicky Latin Bug Report`,
       html: `
-        <h1>${htmlSafe(title)}</h1><div style="display:none;"> - </div>
-        <p>${htmlSafe(body)}</p>
+        <div style="font-family: 'Segoe UI';">
+          <h1 style="margin: 0;">${htmlSafe(title)}</h1>
+          <div style="display:none;"> - </div>
+          <p style="margin: 0;">${htmlSafe(body)}</p>
+        </div>
       `,
       // Ensures the message is sent into a new thread
       references: [`<unique-id-${Date.now()}-${Math.random()}unique@gmail.com`]
