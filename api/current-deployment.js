@@ -16,7 +16,7 @@ export default async function current_deployment(req, res) {
     }
   })
     .then(response => response.json())
-    .then(data => data.deployments.find(deployment => reqTimestamp - deployment.ready >= 2500))
+    .then(data => data.deployments.find(deployment => reqTimestamp - deployment.ready >= 5000))
     .then(deployment => res.status(200).json(deployment))
     .catch(error => res.status(500).json({ error: error.message }));
 }

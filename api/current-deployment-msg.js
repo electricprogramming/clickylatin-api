@@ -16,8 +16,8 @@ export default async function current_deployment_msg(req, res) {
     }
   })
     .then(response => response.json())
-    .then(data => data.deployments.find(deployment => reqTimestamp - deployment.ready >= 2500))
+    .then(data => data.deployments.find(deployment => reqTimestamp - deployment.ready >= 5000))
     .then(deployment => deployment.meta.githubCommitMessage)
-    .then(message => res.status(200).json({ message: `${message} -- timestamp recieved: ${Boolean(req.query.timestamp)}` }))
-    .catch(error => res.status(500).json({ error: error.message }));
+    .then(message => res.status(200).json({ message }))
+    .catch(err => res.status(500).json({ error: err.message }));
 }
