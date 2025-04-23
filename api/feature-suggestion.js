@@ -33,7 +33,7 @@ export default async function feature_suggestion(req, res) {
       references: [`<unique-id-${Date.now()}-${Math.random()}unique@gmail.com`]
     });
 
-    res.status(200).json({ message: 'Email sent!' });
+    res.status(200).json({ message: 'Your feature suggestion has been successfully submitted' });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }

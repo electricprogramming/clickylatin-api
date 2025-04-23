@@ -62,7 +62,7 @@ export default async function bug_report(req, res) {
       references: [`<unique-id-${Date.now()}-${Math.random()}unique@gmail.com`]
     });
 
-    res.status(200).json({ message: 'Email sent!' });
+    res.status(200).json({ message: 'Bug successfully reported' });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
