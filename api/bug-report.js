@@ -40,19 +40,19 @@ export default async function bug_report(req, res) {
             <tbody>
               <tr>
                 <td style="border: 1px solid #999; padding: 0.75em; color: #fff; font-weight: bold;">Device type</td>
-                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device.type)}</td>
+                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device?.type)}</td>
               </tr>
               <tr>
                 <td style="border: 1px solid #999; padding: 0.75em; color: #fff; font-weight: bold;">Device OS</td>
-                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device.OS)}</td>
+                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device?.OS)}</td>
               </tr>
               <tr>
                 <td style="border: 1px solid #999; padding: 0.75em; color: #fff; font-weight: bold;">Device manufacturer</td>
-                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device.manufacturer)}</td>
+                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device?.manufacturer)}</td>
               </tr>
               <tr>
                 <td style="border: 1px solid #999; padding: 0.75em; color: #fff; font-weight: bold;">Browser</td>
-                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device.browser)}</td>
+                <td style="border: 1px solid #999; padding: 0.75em;">${htmlSafe(device?.browser)}</td>
               </tr>
             </tbody>
           </table>
