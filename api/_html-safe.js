@@ -1,5 +1,6 @@
-export default function htmlSafe(html) {
-  return html
+export default function htmlSafe(text) {
+  text = String(text);
+  return text
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
