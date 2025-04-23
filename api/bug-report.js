@@ -6,7 +6,7 @@ export default async function bug_report(req, res) {
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
-  try {
+  
   const { title, body, device } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -17,6 +17,7 @@ export default async function bug_report(req, res) {
     }
   });
 
+  try {
     await transporter.sendMail({
       from: process.env.GMAIL_FROM,
       to: process.env.GMAIL_TO,
