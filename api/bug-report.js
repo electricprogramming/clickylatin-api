@@ -34,8 +34,8 @@ export default async function bug_report(req, res) {
               Device Info
             </caption>
             <colgroup>
-              <col id="a" style="width: 30%; background: #333;">
-              <col id="b" style="width: 70%;">
+              <col style="width: 30%; background: #333;">
+              <col style="width: 70%;">
             </colgroup>
             <tbody>
               <tr>
