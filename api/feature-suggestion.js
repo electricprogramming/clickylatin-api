@@ -30,7 +30,7 @@ export default async function feature_suggestion(req, res) {
         </div>
       `,
       // Ensures the message is sent into a new thread
-      references: [`<unique-id-${Date.now()}-${Math.random()}unique@gmail.com`]
+      references: [`<unique-id-${Date.now()}-${Math.random()}unique@gmail.com>`]
     });
 
     res.status(200).json({ message: 'Your feature suggestion has been successfully submitted' });

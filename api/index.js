@@ -5,7 +5,8 @@ export default function index(req, res) {
     return res.status(200).end();
   }
   
-  res.status(200).send(`Welcome to the new Clicky Latin API!
+  res.status(200).send(`<pre wrap>
+Welcome to the new Clicky Latin API!
 To get the data of a game, GET /get-game.
 To get all games, GET /all.
 To create a game, POST /create.

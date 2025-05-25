@@ -47,6 +47,10 @@
       "dest": "/api/bug-report.js"
     },
     {
+      "src": "/test",
+      "dest": "/api/test.js"
+    },
+    {
       "src": "/(.+)",
       "dest": "/api/fake-method.js"
     }
