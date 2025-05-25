@@ -14,7 +14,7 @@ To get all games, GET /all.
 To create a game, POST /create.
 To delete a game, GET or DELETE /delete with authentication.
 To get the current deployment, GET /current-deployment.
-To get the message of the current deployment, GET /current-deployment-msg.
+To get the commit message of the current deployment, GET /current-deployment-msg.
 To suggest a new feature, POST /feature-suggestion.
 To report a bug, POST /report-a-bug.` +
 (isBrowser ? '</pre>' : ''));
