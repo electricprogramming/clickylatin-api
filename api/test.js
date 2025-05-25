@@ -13,6 +13,14 @@ export default async function detect_origin(req, res) {
   const fetchMode = req.headers['sec-fetch-mode'];
   const fetchDest = req.headers['sec-fetch-dest'];
 
+  const detectedFrom = {
+    accept,
+    fetchMode,
+    fetchDest
+  };
+
+  console.log('Request detectedFrom:', detectedFrom);
+
   const isBrowserNavigation =
     accept.includes('text/html') ||
     (fetchMode === 'navigate' && fetchDest === 'document');
@@ -33,11 +41,7 @@ export default async function detect_origin(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json({
       message: 'Hello from fetch() or API call!',
-      detectedFrom: {
-        accept,
-        fetchMode,
-        fetchDest
-      }
+      detectedFrom
     });
   }
 }
