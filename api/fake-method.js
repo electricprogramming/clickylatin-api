@@ -6,8 +6,10 @@ export default function fake_method(req, res) {
     return res.status(200).end();
   }
   const { isBrowser } = getReqOrigin(req);
-  
-  res.status(404).send(isBrowser ? '<pre wrap>' : '' +
-`Cannot ${req.method} ${req.url}` +
-isBrowser ? '</pre>' : '');
+
+  res.status(404).send(
+    (isBrowser ? '<pre wrap>' : '') +
+    `Cannot ${req.method} ${req.url}` +
+    (isBrowser ? '</pre>' : '')
+  );
 }
