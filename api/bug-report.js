@@ -29,6 +29,7 @@ export default async function bug_report(req, res) {
           <br>
           <p style="margin: 0; font-size: 1.2em;">${htmlSafe(body)}</p>
           <br>
+          <div style="display:none;"> | </div>
           <table style="width: 85%; border-collapse: collapse; margin: auto; font-family: 'Segoe UI';">
             <caption style="caption-side: top; font-size: 1.5em; font-weight: bold; padding: 0.2em;">
               Device Info
